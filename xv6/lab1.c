@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 	int waitPid(void);
 	int PScheduler(void);
 
-  printf(1, "\n This program tests the correctness of your lab#1\n");
+  printf(1, "\n This program tests the correctness of your lab#2\n");
   
   if (atoi(argv[1]) == 1)
 	exitWait();
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
   else if (atoi(argv[1]) == 3)
 	PScheduler();
   else 
-   printf(1, "\ntype \"lab1 1\" to test exit and wait, \"lab1 2\" to test waitpid and \"lab1 3\" to test the priority scheduler \n");
+   printf(1, "\ntype \"lab2 1\" to test exit and wait, \"lab2 2\" to test waitpid and \"lab2 3\" to test the priority scheduler \n");
   
     // End of test
 	 exit(0);
@@ -107,7 +107,7 @@ int waitPid(void){
   int pid;
   int i,j,k;
   
-    printf(1, "\n  Step 2: testing the priority scheduler and setpriority(int priority)) systema call:\n");
+    printf(1, "\n  Step 2: testing the priority scheduler and setpriority(int priority)) system call:\n");
     printf(1, "\n  Step 2: Assuming that the priorities range between range between 0 to 31\n");
     printf(1, "\n  Step 2: 0 is the highest priority. All processes have a default priority of 10\n");
     printf(1, "\n  Step 2: The parent processes will switch to priority 0\n");
