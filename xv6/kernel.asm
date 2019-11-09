@@ -7122,8 +7122,8 @@ int setpriority(int pri) {
 80103a87:	8b 5d 08             	mov    0x8(%ebp),%ebx
   struct proc *p = myproc();
 80103a8a:	e8 21 fc ff ff       	call   801036b0 <myproc>
-  if(pri < 0 || pri > 63){
-80103a8f:	83 fb 3f             	cmp    $0x3f,%ebx
+  if(pri < 0 || pri > 32){
+80103a8f:	83 fb 20             	cmp    $0x20,%ebx
 80103a92:	77 0c                	ja     80103aa0 <setpriority+0x20>
     p->priority = pri;
 80103a94:	89 58 18             	mov    %ebx,0x18(%eax)
@@ -7136,8 +7136,8 @@ int setpriority(int pri) {
 80103a9d:	5d                   	pop    %ebp
 80103a9e:	c3                   	ret    
 80103a9f:	90                   	nop
-    p->priority = 20;
-80103aa0:	c7 40 18 14 00 00 00 	movl   $0x14,0x18(%eax)
+    p->priority = 10;
+80103aa0:	c7 40 18 0a 00 00 00 	movl   $0xa,0x18(%eax)
 }
 80103aa7:	83 c4 04             	add    $0x4,%esp
     return 0;
@@ -9017,7 +9017,7 @@ argstr(int n, char **pp)
 801047f9:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
 
 80104800 <syscall>:
-//[SYS_getpriority] sys_getpriority
+[SYS_setpriority] sys_setpriority,
 };
 
 void
@@ -10647,8 +10647,7 @@ sys_getpid(void)
 8010554f:	c3                   	ret    
 
 80105550 <sys_sbrk>:
-  return myproc()->pid;
-}*/
+
 
 int
 sys_sbrk(void)

@@ -30,7 +30,6 @@
 000002e0 openiputtest
 00003fb2 mknod
 0000400a setpriority
-00004012 getpriority
 00003e50 gets
 00003fea getpid
 000009c0 pipe1

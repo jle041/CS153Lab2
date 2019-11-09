@@ -436,8 +436,8 @@ scheduler(void)
 int setpriority(int pri) {
 //  struct proc *currproc = myproc();
   struct proc *p = myproc();
-  if(pri < 0 || pri > 63){
-    p->priority = 20;
+  if(pri < 0 || pri > 32){
+    p->priority = 10;
     return 0;
   }
   else {

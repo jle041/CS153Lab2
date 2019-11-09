@@ -1924,12 +1924,10 @@ SYSCALL(setpriority)
      e8a:	b8 17 00 00 00       	mov    $0x17,%eax
      e8f:	cd 40                	int    $0x40
      e91:	c3                   	ret    
-
-00000e92 <getpriority>:
-SYSCALL(getpriority)
-     e92:	b8 18 00 00 00       	mov    $0x18,%eax
-     e97:	cd 40                	int    $0x40
-     e99:	c3                   	ret    
+     e92:	66 90                	xchg   %ax,%ax
+     e94:	66 90                	xchg   %ax,%ax
+     e96:	66 90                	xchg   %ax,%ax
+     e98:	66 90                	xchg   %ax,%ax
      e9a:	66 90                	xchg   %ax,%ax
      e9c:	66 90                	xchg   %ax,%ax
      e9e:	66 90                	xchg   %ax,%ax

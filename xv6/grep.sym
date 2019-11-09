@@ -25,7 +25,6 @@
 00000140 matchhere
 000005a2 mknod
 000005fa setpriority
-00000602 getpriority
 00000440 gets
 000005da getpid
 00000220 grep

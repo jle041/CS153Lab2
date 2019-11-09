@@ -831,12 +831,10 @@ SYSCALL(setpriority)
  65a:	b8 17 00 00 00       	mov    $0x17,%eax
  65f:	cd 40                	int    $0x40
  661:	c3                   	ret    
-
-00000662 <getpriority>:
-SYSCALL(getpriority)
- 662:	b8 18 00 00 00       	mov    $0x18,%eax
- 667:	cd 40                	int    $0x40
- 669:	c3                   	ret    
+ 662:	66 90                	xchg   %ax,%ax
+ 664:	66 90                	xchg   %ax,%ax
+ 666:	66 90                	xchg   %ax,%ax
+ 668:	66 90                	xchg   %ax,%ax
  66a:	66 90                	xchg   %ax,%ax
  66c:	66 90                	xchg   %ax,%ax
  66e:	66 90                	xchg   %ax,%ax

@@ -553,12 +553,10 @@ SYSCALL(setpriority)
  2fa:	b8 17 00 00 00       	mov    $0x17,%eax
  2ff:	cd 40                	int    $0x40
  301:	c3                   	ret    
-
-00000302 <getpriority>:
-SYSCALL(getpriority)
- 302:	b8 18 00 00 00       	mov    $0x18,%eax
- 307:	cd 40                	int    $0x40
- 309:	c3                   	ret    
+ 302:	66 90                	xchg   %ax,%ax
+ 304:	66 90                	xchg   %ax,%ax
+ 306:	66 90                	xchg   %ax,%ax
+ 308:	66 90                	xchg   %ax,%ax
  30a:	66 90                	xchg   %ax,%ax
  30c:	66 90                	xchg   %ax,%ax
  30e:	66 90                	xchg   %ax,%ax

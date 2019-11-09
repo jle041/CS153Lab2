@@ -24,7 +24,6 @@
 00000390 memmove
 00000412 mknod
 0000046a setpriority
-00000472 getpriority
 000002b0 gets
 0000044a getpid
 000007a0 malloc

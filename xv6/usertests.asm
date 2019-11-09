@@ -5741,12 +5741,10 @@ SYSCALL(setpriority)
     400a:	b8 17 00 00 00       	mov    $0x17,%eax
     400f:	cd 40                	int    $0x40
     4011:	c3                   	ret    
-
-00004012 <getpriority>:
-SYSCALL(getpriority)
-    4012:	b8 18 00 00 00       	mov    $0x18,%eax
-    4017:	cd 40                	int    $0x40
-    4019:	c3                   	ret    
+    4012:	66 90                	xchg   %ax,%ax
+    4014:	66 90                	xchg   %ax,%ax
+    4016:	66 90                	xchg   %ax,%ax
+    4018:	66 90                	xchg   %ax,%ax
     401a:	66 90                	xchg   %ax,%ax
     401c:	66 90                	xchg   %ax,%ax
     401e:	66 90                	xchg   %ax,%ax

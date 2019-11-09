@@ -58,7 +58,7 @@ main(void)
 {
   57:	83 ec 20             	sub    $0x20,%esp
   printf(1, "fork test\n");
-  5a:	c7 44 24 04 2c 04 00 	movl   $0x42c,0x4(%esp)
+  5a:	c7 44 24 04 24 04 00 	movl   $0x424,0x4(%esp)
   61:	00 
   62:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
   int status = 1;
@@ -97,7 +97,7 @@ main(void)
   b9:	83 f8 ff             	cmp    $0xffffffff,%eax
   bc:	75 72                	jne    130 <forktest+0xe0>
   printf(1, "fork test OK\n");
-  be:	c7 44 24 04 5e 04 00 	movl   $0x45e,0x4(%esp)
+  be:	c7 44 24 04 56 04 00 	movl   $0x456,0x4(%esp)
   c5:	00 
   c6:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
   cd:	e8 4e ff ff ff       	call   20 <printf>
@@ -109,9 +109,9 @@ main(void)
   d8:	c3                   	ret    
   d9:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
   write(fd, s, strlen(s));
-  e0:	c7 04 24 6c 04 00 00 	movl   $0x46c,(%esp)
+  e0:	c7 04 24 64 04 00 00 	movl   $0x464,(%esp)
   e7:	e8 e4 00 00 00       	call   1d0 <strlen>
-  ec:	c7 44 24 04 6c 04 00 	movl   $0x46c,0x4(%esp)
+  ec:	c7 44 24 04 64 04 00 	movl   $0x464,0x4(%esp)
   f3:	00 
   f4:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
   fb:	89 44 24 08          	mov    %eax,0x8(%esp)
@@ -120,7 +120,7 @@ main(void)
  104:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
  10b:	e8 62 02 00 00       	call   372 <exit>
       printf(1, "wait stopped early\n");
- 110:	c7 44 24 04 37 04 00 	movl   $0x437,0x4(%esp)
+ 110:	c7 44 24 04 2f 04 00 	movl   $0x42f,0x4(%esp)
  117:	00 
  118:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
  11f:	e8 fc fe ff ff       	call   20 <printf>
@@ -128,7 +128,7 @@ main(void)
  124:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
  12b:	e8 42 02 00 00       	call   372 <exit>
     printf(1, "wait got too many\n");
- 130:	c7 44 24 04 4b 04 00 	movl   $0x44b,0x4(%esp)
+ 130:	c7 44 24 04 43 04 00 	movl   $0x443,0x4(%esp)
  137:	00 
  138:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
  13f:	e8 dc fe ff ff       	call   20 <printf>
@@ -660,9 +660,3 @@ SYSCALL(setpriority)
  41a:	b8 17 00 00 00       	mov    $0x17,%eax
  41f:	cd 40                	int    $0x40
  421:	c3                   	ret    
-
-00000422 <getpriority>:
-SYSCALL(getpriority)
- 422:	b8 18 00 00 00       	mov    $0x18,%eax
- 427:	cd 40                	int    $0x40
- 429:	c3                   	ret    

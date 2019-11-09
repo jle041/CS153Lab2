@@ -27,7 +27,6 @@
 00000e32 mknod
 00000360 execcmd
 00000e8a setpriority
-00000e92 getpriority
 00000cd0 gets
 00000e6a getpid
 00000890 parsepipe

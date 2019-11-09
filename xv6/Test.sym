@@ -25,7 +25,6 @@
 000007d2 mknod
 000001a0 waitPid
 0000082a setpriority
-00000832 getpriority
 00000670 gets
 000000a0 exitWait
 0000080a getpid
